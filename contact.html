@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Laptop Zone Support</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            padding: 16px;
+            border-radius: 12px;
+            color: white;
+            margin-top: 10px;
+            font-family: var(--font-body);
+            transition: var(--transition-fast);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-blobs"></div>
+
+    <nav class="nav scrolled">
+        <a href="index.html" class="logo">Laptop Zone</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Laptops</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+        <button class="btn btn-primary">Join Fleet</button>
+    </nav>
+
+    <section class="section"
+        style="padding-top: 200px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px;">
+        <div>
+            <p class="section-label" style="text-align: left;">Direct Uplink</p>
+            <h2 class="glitch" data-text="Connect." style="font-size: 4rem; font-family: var(--font-heading);">Connect.
+            </h2>
+            <p style="color: var(--text-silver); margin-top: 20px; font-size: 1.1rem;">Need assistance with your
+                workstation? Or curious about our next-gen deployments? Our tactical support team is standing by.</p>
+
+            <div style="margin-top: 50px;">
+                <div class="border-trace glass-card" style="margin-bottom: 20px; border-radius: 16px;">
+                    <div class="scanline-overlay"></div>
+                    <div class="glass-card" style="border: none;">
+                        <p
+                            style="color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">
+                            Signal Loop</p>
+                        <p style="margin-top: 5px;">comms@laptopzone.sys</p>
+                    </div>
+                </div>
+                <div class="border-trace glass-card" style="border-radius: 16px;">
+                    <div class="scanline-overlay"></div>
+                    <div class="glass-card" style="border: none;">
+                        <p
+                            style="color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">
+                            Vector Base</p>
+                        <p style="margin-top: 5px;">256 Neon Circuit, SV 94025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-trace glass-card" style="padding: 40px; border-radius: 24px;">
+            <div class="scanline-overlay"></div>
+            <form id="overhaulContact">
+                <div style="margin-bottom: 25px;">
+                    <label
+                        style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-silver);">Identifier</label>
+                    <input type="text" class="form-input" placeholder="Enter name..." required>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <label
+                        style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-silver);">Data
+                        Link</label>
+                    <input type="email" class="form-input" placeholder="Enter email..." required>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <label
+                        style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-silver);">Transmission</label>
+                    <textarea class="form-input" rows="5" placeholder="Package details..." required></textarea>
+                </div>
+                <div class="border-trace" style="border-radius: 50px;">
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Initiate
+                        Uplink</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="section" style="border-top: 1px solid var(--glass-border); padding: 60px 10%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px;">
+            <div>
+                <div class="logo">Laptop Zone</div>
+                <p style="color: var(--text-silver); margin-top: 10px;">The weightless revolution starts here.</p>
+            </div>
+            <div style="display: flex; gap: 40px;">
+                <a href="#" class="nav-link">Twitter</a>
+                <a href="#" class="nav-link">Instagram</a>
+                <a href="#" class="nav-link">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.getElementById('overhaulContact').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Uplink Successful. Reception confirmed.');
+            e.target.reset();
+        });
+    </script>
+</body>
+
+</html>
